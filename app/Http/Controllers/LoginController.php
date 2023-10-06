@@ -20,6 +20,7 @@ class LoginController extends Controller
         ]);
 
         // Autenticar al usuario
+        // Remember es para mantener la sesión abierta
         if (!auth()->attempt($request->only('email', 'password'), $request->remember)) {
              return back()->with('mensaje', 'Credenciales no válidas');
          }
