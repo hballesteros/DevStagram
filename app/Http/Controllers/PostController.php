@@ -34,4 +34,10 @@ class PostController extends Controller
             'user' => $user
         ]);
     }
+
+
+    public function create() 
+    {
+        return view('posts.create');
+    }   
 }
